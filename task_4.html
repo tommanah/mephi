@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма заказа оборудования</title>
+</head>
+<body>
+    <h1>Форма заказа оборудования</h1>
+    <form action="process_order.php" method="POST">
+        <label for="first_name">Имя клиента:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="last_name">Фамилия клиента:</label>
+        <input type="text" id="last_name" name="last_name" required><br><br>
+
+        <label>Вариант оплаты:</label><br>
+        <input type="radio" id="cash" name="payment_method" value="наличный" required>
+        <label for="cash">Наличный расчет</label><br>
+        <input type="radio" id="credit_card" name="payment_method" value="безналичный" required>
+        <label for="credit_card">Безналичный расчет</label><br><br>
+
+        <label for="address">Адрес клиента:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="credit_card">Код кредитной карточки клиента:</label>
+        <input type="text" id="credit_card" name="credit_card" required><br><br>
+
+        <label>Опции доставки:</label><br>
+        <input type="checkbox" id="standard_delivery" name="delivery_options[]" value="Стандартная доставка">
+        <label for="standard_delivery">Стандартная доставка</label><br>
+        <input type="checkbox" id="express_delivery" name="delivery_options[]" value="Экспресс-доставка">
+        <label for="express_delivery">Экспресс-доставка</label><br><br>
+
+        <label for="order_details">Дополнительные сведения о заказе:</label><br>
+        <textarea id="order_details" name="order_details" rows="4" cols="50"></textarea><br><br>
+
+        <label for="product">Заказанный товар:</label>
+        <select id="product" name="product">
+            <option value="Оборудование 1">Оборудование 1</option>
+            <option value="Оборудование 2">Оборудование 2</option>
+            <option value="Оборудование 3">Оборудование 3</option>
+        </select><br><br>
+
+        <input type="submit" value="Отправить заказ">
+    </form>
+</body>
+</html>
